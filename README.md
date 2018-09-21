@@ -6,4 +6,4 @@ su - hdfs
 
 - Acceso a Hue:
 
-http://ec2-52-3-244-61.compute-1.amazonaws.com:8888/
+http://<IP>:8888/
