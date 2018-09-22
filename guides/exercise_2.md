@@ -1,8 +1,8 @@
-### Objetivos
+### OBJETIVO
 
 * Entender el proceso de map reduce, utilizando código en Python 
 
-### Guia
+### GUIA
 
 1. Ir a la carpeta de los libros  
 `cd /taller/libros`
@@ -23,11 +23,6 @@
 `hdfs dfs -ls /user/<tu_nombre>/libros_output`  
 `hdfs dfs -cat /user/<tu_nombre>/libros_output/<archivo> (elegir un archivo del listado anterior)`
 
-## Referencia
+## REFERENCIA
 
 https://hadoop.apache.org/docs/r1.2.1/mapred_tutorial.html
- 
- 
- 
- hdfs dfs -ls /user/<tu_nombre>/libros_output
-hdfs dfs -cat /user/<tu_nombre>/libros_output/<archivo> (elegir un archivo del listado anterior)
