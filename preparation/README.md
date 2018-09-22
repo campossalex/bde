@@ -1,4 +1,4 @@
-#1. Decompress taller.zip
+#1. Decompress taller.zip at /taller directory
 
 #2. Install mysql database in any node from the cluster or in a separated node. Create a new database (i.e. taller)
 
