@@ -10,4 +10,5 @@
 4. Create a user taller with password taller and grant privileges to taller database.  
 `GRANT ALL PRIVILEGES ON taller.* TO 'taller'@'%' IDENTIFIED BY 'taller';`
 
-5. Load data for sqoop ingest: mysql -u <user> -p <password> taller < orden.sql
+5. Load data for sqoop ingest  
+`mysql -u <user> -p <password> taller < orden.sql`
