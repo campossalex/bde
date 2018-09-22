@@ -6,4 +6,4 @@ su - hdfs
 
 - Acceso a Hue:
 
-http://<IP>:8888/
+http://<IP_Address>:8888/
