@@ -6,10 +6,10 @@
 `cd /taller/pig/`
 
 2. Crear carpeta en HDFS  
-`hdfs dfs -mkdir /user/<tu_nombre/movierating`
+`hdfs dfs -mkdir /user/<tu_nombre>/movierating`
 
 3. Subir archivo a HDFS  
-`hdfs dfs -put movierating.txt /user/<tu_nombre/movierating`
+`hdfs dfs -put movierating.csv /user/<tu_nombre>/movierating`
 
 4. Editar el archivo comandos_pig.txt  
 `cambiar <tu_nombre> por el valor correspondiente`
