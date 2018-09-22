@@ -4,4 +4,4 @@
 `su - hdfs`
 
 * Hue Access:  
-`http://<IP_Address>:8888/p
+`http://<IP_Address>:8888/
