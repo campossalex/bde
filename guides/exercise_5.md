@@ -11,7 +11,7 @@
 `CREATE DATABASE <tu_nombre>;`
 
 4. Crear la tabla externa que apunte al directorio en HDFS  
-`CREATE EXTERNLA TABLE <tu_nombre>.orden LIKE PARQUET '<ruta del parquet>' STORED AS PARQUET LOCATION '/user/<tu_nombre>/orden_trabajo';`  
+`CREATE EXTERNAL TABLE <tu_nombre>.orden LIKE PARQUET '<ruta del parquet>' STORED AS PARQUET LOCATION '/user/<tu_nombre>/orden_trabajo';`  
 Ejemplo ruta parquet: /user/<tu_nombre>/orden_trabajo/6b672ea3-45fa-4fca-b4ad- 47617245b76e.parquet
 
 
