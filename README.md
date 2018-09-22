@@ -1,9 +1,9 @@
 # Big Data Essentials
 
-- Para ejecutar comandos como usuario hdfs, debes ejecutar lo siguiente:
+* Para ejecutar comandos como usuario hdfs, debes ejecutar lo siguiente:  
 
-su - hdfs
+`su - hdfs`
 
-- Acceso a Hue:
+* Acceso a Hue:  
 
-http://<IP_Address>:8888/
+`http://<IP_Address>:8888/p
