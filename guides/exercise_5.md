@@ -19,7 +19,7 @@ Ejemplo ruta parquet: /user/<tu_nombre>/orden_trabajo/6b672ea3-45fa-4fca-b4ad- 4
 `DESCRIBE <tu_nombre>.orden;`
 
 6. Ejecutar queries libres con los datos utilizados. Ejemplos:  
-`select * from <tu_nombre>.orden;`  
+`select * from <tu_nombre>.orden limit 30;`  
 `select count(*) from <tu_nombre>.orden;`  
 `select tipo_orden_nombre, count(*) from table <tu_nombre>.orden group by tipo_orden_nombre;`  
 
