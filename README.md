@@ -1,7 +1,7 @@
-# Big Data Essentials
+# Hadoop Essentials Workshop
 
-* Para ejecutar comandos como usuario hdfs, debes ejecutar lo siguiente:  
+* To execute commands as hdfs user, run following:  
 `su - hdfs`
 
-* Acceso a Hue:  
+* Hue Access:  
 `http://<IP_Address>:8888/p
