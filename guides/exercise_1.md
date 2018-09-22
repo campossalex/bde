@@ -1,9 +1,9 @@
-### Objetivo
+### OBJETIVO
 
 - Interactuar con el componente HDFS
 - Familiarizarse con los comandos básicos del HDFS
 
-### Guia
+### GUIA
 
 1. Ir a la carpeta principal  
 `cd /taller/cdr`
@@ -22,6 +22,6 @@
 Ir a http://<IP_NameNode>:50070/ , ir a la pestaña Browser, y buscar los archivos recién subidos al HDFS. 
 Revisar los bloques de cada archivo recién agregado.
 
-### Referencia
+### REFERENCIA
 
 https://hadoop.apache.org/docs/r2.4.1/hadoop-project-dist/hadoop-common/FileSystemShell.html
