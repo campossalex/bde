@@ -1,4 +1,4 @@
-### OBJETIVOS
+### OBJETIVO
 * Ejecutar un job MapReduce por medio de Pig, sobre datos estructurados 
 
 ### GUIA
