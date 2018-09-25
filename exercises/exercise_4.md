@@ -2,17 +2,20 @@
 * Ingestar datos desde base de datos
 
 ### GUIA
-1. El instructor mostrará el formato de datos  
+1. El instructor mostrará el formato de datos
 
-2. Ejecutar el siguiente comando de Sqoop  
+2. Verificar si existe conexión con la base de datos    
+`sqoop list-tables --driver com.mysql.jdbc.Driver --connect jdbc:mysql://<IP_DataBase>:3306/taller --username taller --password taller`
+
+3. Ejecutar el siguiente comando de Sqoop  
 `sqoop import --driver com.mysql.jdbc.Driver --connect jdbc:mysql://<IP_DataBase>:3306/taller --username taller --password taller --table orden --split-by orden_trabajo_id --target-dir /user/<tu_nombre>/orden_trabajo`
 
-3. Revisar la ingesta en el directorio HDFS  
+4. Revisar la ingesta en el directorio HDFS  
 `hdfs dfs -ls /user/<tu_nombre>/orden_trabajo`
 
-4. Intentar ejecutar el comando del punto 2 nuevamente.
+5. Intentar ejecutar el comando del punto 2 nuevamente.
 
-5. Revisar el mensaje de error que se mosrtrará en pantalla.
+6. Revisar el mensaje de error que se mosrtrará en pantalla.
 
 ### GUIA CONTINUACION
 
