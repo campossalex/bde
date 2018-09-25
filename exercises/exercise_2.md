@@ -17,7 +17,7 @@
 `cd /taller/mapreduce`
 
 5. Ejecutar el job MapReducer  
-`hadoop jar /opt/cloudera/parcels/CDH/lib/hadoop-0.20-mapreduce/contrib/streaming/hadoop-streaming-2.6*.jar -file mapper.py -mapper mapper.py -file reducer.py -reducer reducer.py -input /user/<tu_nombre>/libros -output /user/<tu_nombre>/libros_output`
+`hadoop jar /opt/cloudera/parcels/CDH/lib/hadoop-mapreduce/hadoop-streaming-2.6*.jar -file mapper.py -mapper mapper.py -file reducer.py -reducer reducer.py -input /user/<tu_nombre>/libros -output /user/<tu_nombre>/libros_output`
 
 6. Revisar salida del proceso  
 `hdfs dfs -ls /user/<tu_nombre>/libros_output`  
