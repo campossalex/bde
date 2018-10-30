@@ -18,7 +18,7 @@
 `create 'emp_data',{NAME => 'info'}`
 
 5. Cargar la información en Hbase  
-`hbase org.apache.hadoop.hbase.mapreduce.ImportTsv -Dimporttsv.separator=',' -Dimporttsv.columns='HBASE_ROW_KEY,info:ename,info:designation,info:manager,info:hire_date,info:sal,info:deptno' emp_data /user/hdfs/emp_data/emp_data.csv`
+`hbase org.apache.hadoop.hbase.mapreduce.ImportTsv -Dimporttsv.separator=',' -Dimporttsv.columns='HBASE_ROW_KEY,info:ename,info:designation,info:manager,info:hire_date,info:sal,info:deptno' emp_data /user/<tu_nombre>/emp_data/emp_data.csv`
 
 6. Realizar operaciones sobre los datos
 `hbase shell`  
