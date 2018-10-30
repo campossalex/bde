@@ -35,7 +35,7 @@ tier1.sinks.sink1.hdfs.path = hdfs://localhost:8020/user/hdfs/flume/events`
 4. Guardar los cambios en "Save" y reiniciar en serviio en "Actions -> Restart":
 
 5. Iniciar telnet  
-`telnet localhost <puerto>`
+`telnet localhost <puerto>` 
 Una vez que aparezca el prompt, digitar "Hello World from Flume"
 
 6. Ver los archivos en Browser:
