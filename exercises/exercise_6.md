@@ -6,11 +6,11 @@
 
 2. Abrir una CLI para instalar telnet (yum install telnet o apt-get install telnet) 
 
-3. Iniciar telnet  
-`telnet localhost <puerto>`
-Una vez que aparezca el prompt, digitar "Hello World from Flume"
+3. Iniciar telnet:  
+`telnet localhost <puerto>`  
+Una vez que aparezca el prompt, digitar "Hello World from Flume"  
 
-4. Abrir otra CLI para ver los logs de Flume
+4. Abrir otra CLI para ver los logs de Flume:  
 `tail -f /var/log/flume-ng/flume-cmf*.log`
 Usted podrá ver los mensajes que ha ingresado por telnet
 
