@@ -26,11 +26,11 @@ Ahora usted deberá modificar la configuración de Flume para almacenar los mens
 `hdfs dfs -mkdir /user/hdfs/flume/events`  
 `hdfs dfs -chmod 777 /user/hdfs/flume/events`  
 
-3. Bajar o buscar "Configuration File" y agregar las siguientes lineas:
+3. Bajar o buscar "Configuration File" y agregar las siguientes lineas:  
 `tier1.sinks.sink1.type= HDFS`  
 `tier1.sinks.sink1.fileType=DataStream`  
 `tier1.sinks.sink1.channel      = channel1`  
-`tier1.sinks.sink1.hdfs.path = hdfs://localhost:8020/user/hdfs/flume/events`  
+`tier1.sinks.sink1.hdfs.path = hdfs://<IP_NAMENODE>:8020/user/hdfs/flume/events`  
 
 4. Guardar los cambios en "Save" y reiniciar en serviio en "Actions -> Restart":
 
