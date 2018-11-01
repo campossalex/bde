@@ -15,7 +15,7 @@
 `    print("%s: %i" % (word, count))`  
 Dar 4 espacios antes del print
 
-3. Revisar 
+3. Revisar el resultado.
 
 
 ### REFERENCIA
