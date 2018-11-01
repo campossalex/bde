@@ -13,6 +13,7 @@
 `output = counts.collect()`  
 `for (word, count) in output:`  
 `    print("%s: %i" % (word, count))`  
+Dar 4 espacios antes del print
 
 3. Revisar 
 
