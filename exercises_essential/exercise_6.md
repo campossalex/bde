@@ -26,7 +26,7 @@
 
 4. Ejecutar consultas sobre la tabla  
 `CREATE TABLE <tu_nombre>.metricas_accesos AS 
-SELECT ip, status, COUNT(*) cantidad FROM <tu_nombre>.access_log GROUP BY status, ip;`
+SELECT uri, status, COUNT(*) cantidad FROM <tu_nombre>.access_log GROUP BY uri, status;`
 
 ### REFERENCIA
 
