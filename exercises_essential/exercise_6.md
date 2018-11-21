@@ -5,7 +5,7 @@
 1. Revisar los logs de eventos de acceso de Apache  
 `hdfs dfs -cat /user/hdfs/web_logs/access.log | head`
 
-2. Crear una tabla en Hive
+2. Crear una tabla en Hive  
 `CREATE EXTERNAL TABLE <tu_nombre>.access_log (
         ip STRING,
         time_local STRING,
@@ -26,7 +26,7 @@
 
 4. Ejecutar consultas sobre la tabla  
 `CREATE TABLE <tu_nombre>.metricas_accesos AS 
-SELECT uri, status, COUNT(*) cantidad FROM <tu_nombre>.access_log GROUP BY status, uri;`
+SELECT ip, status, COUNT(*) cantidad FROM <tu_nombre>.access_log GROUP BY status, ip;`
 
 ### REFERENCIA
 
