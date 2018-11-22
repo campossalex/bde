@@ -13,7 +13,7 @@
 4. Revisar la ingesta en el directorio HDFS  
 `hdfs dfs -ls /user/<tu_nombre>/orden_trabajo`
 
-5. Intentar ejecutar el comando del punto 2 nuevamente.
+5. Intentar ejecutar el comando del punto 3 nuevamente.
 
 6. Revisar el mensaje de error que se mosrtrará en pantalla.
 
