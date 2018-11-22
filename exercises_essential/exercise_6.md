@@ -2,10 +2,10 @@
 * Crear una tabla en Hive con Serde para leer datos de logs de eventos de Apache Web Server 
 
 ### GUIA
-1. Revisar los logs de eventos de acceso de Apache  
+1. Revisar los logs de eventos de acceso de Apache, por consola (Putty o terminal):  
 `hdfs dfs -cat /user/hdfs/web_logs/access.log | head`
 
-2. Crear una tabla en Hive  
+2. Crear una tabla en Hive por la interface de Hue:  
 `CREATE EXTERNAL TABLE <tu_nombre>.access_log (
         ip STRING,
         time_local STRING,
