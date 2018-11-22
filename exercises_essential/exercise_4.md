@@ -5,10 +5,10 @@
 1. El instructor mostrará el formato de datos
 
 2. Verificar si existe conexión con la base de datos    
-`sqoop list-tables --driver com.mysql.jdbc.Driver --connect jdbc:mysql://<IP_DataBase>:3306/taller --username taller --password taller`
+`sqoop list-tables --driver com.mysql.jdbc.Driver --connect jdbc:mysql://10.0.0.26:3306/taller --username taller --password taller`
 
 3. Ejecutar el siguiente comando de Sqoop  
-`sqoop import --driver com.mysql.jdbc.Driver --connect jdbc:mysql://<IP_DataBase>:3306/taller --username taller --password taller --table orden --split-by orden_trabajo_id --target-dir /user/<tu_nombre>/orden_trabajo`
+`sqoop import --driver com.mysql.jdbc.Driver --connect jdbc:mysql://10.0.0.26:3306/taller --username taller --password taller --table orden --split-by orden_trabajo_id --target-dir /user/<tu_nombre>/orden_trabajo`
 
 4. Revisar la ingesta en el directorio HDFS  
 `hdfs dfs -ls /user/<tu_nombre>/orden_trabajo`
