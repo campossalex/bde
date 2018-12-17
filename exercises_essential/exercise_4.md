@@ -7,6 +7,8 @@
 2. Verificar si existe conexión con la base de datos    
 `sqoop list-tables --driver com.mysql.jdbc.Driver --connect jdbc:mysql://10.0.0.26:3306/taller --username taller --password taller`
 
+Deberá listada la tabla "orden" de la base de datos.  
+
 3. Ejecutar el siguiente comando de Sqoop  
 `sqoop import --driver com.mysql.jdbc.Driver --connect jdbc:mysql://10.0.0.26:3306/taller --username taller --password taller --table orden --split-by orden_trabajo_id --target-dir /user/<tu_nombre>/orden_trabajo`
 
