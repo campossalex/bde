@@ -19,7 +19,7 @@
 `hdfs dfs -ls /user/<tu_nombre>/cdr`
 
 5. Ver los archivos en Browser  
-Ir a http://<IP_NameNode>:50070/ , ir a la pestaña Browser, y buscar los archivos recién subidos al HDFS. 
+Ir a http://<IP_NameNode>:50070/ , ir a la pestaña Utilities -> Browser, y buscar los archivos recién subidos al HDFS. 
 Revisar los bloques de cada archivo recién agregado.
 
 ### REFERENCIA
