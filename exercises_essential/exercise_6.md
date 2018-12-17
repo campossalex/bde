@@ -5,7 +5,7 @@
 1. Revisar los logs de eventos de acceso de Apache, por consola (Putty o terminal):  
 `hdfs dfs -cat /user/hdfs/web_logs/access.log | head`
 
-2. Crear una tabla en Hive por la interface de Hue:  
+2. Crear una tabla en Hive por la interface de Hue -> Consulta -> Hive:  
 `CREATE EXTERNAL TABLE <tu_nombre>.access_log (
         ip STRING,
         time_local STRING,
