@@ -11,11 +11,15 @@
 3. Subir archivo a HDFS  
 `hdfs dfs -put movierating.csv /user/<tu_nombre>/movierating`
 
-4. Editar el archivo comandos_pig.txt  
-`cambiar <tu_nombre> por el valor correspondiente`
+4. Duplicar el archivos de comandos  
+`cp comandos_pig.txt comandos_pig_<tu_nombre>.txt`
+
+4. Editar el archivo comandos_pig.txt duplicado 
+`cambiar la expresión "<tu_nombre>" en el archivo por el valor correspondiente a la carpeta en HDFS
+Aproveche de revisar y entender que operación analítica ejecutan los comandos`
 
 5. Ejecutar el Pig Script  
-`pig comandos_pig.txt`
+`pig comandos_pig_<tu_nombre>.txt`
 
 ### REFERENCIA
 
