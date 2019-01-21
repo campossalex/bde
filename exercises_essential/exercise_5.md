@@ -1,28 +1,33 @@
 ### OBJETIVO
-* Crear una tabla en Impala con los datos ingestados de la base de datos 
+* Crear una tabla en Hive con Serde para leer datos de logs de eventos de Apache Web Server 
 
 ### GUIA
-1. Copiar la ruta del primer archuivo parquet en directorio HDFS  
-`hdfs dfs -ls /user/<tu_nombre>/orden_trabajo`
+1. Revisar los logs de eventos de acceso de Apache, por consola (Putty o terminal):  
+`hdfs dfs -cat /user/hdfs/web_logs/access.log | head`
 
-2. Acceder la consola de Hue o impala-shell (consola línea de comando)  
+2. Crear una tabla en Hive por la interface de Hue -> Consulta -> Hive:  
+`CREATE EXTERNAL TABLE <tu_nombre>.access_log (
+        ip STRING,
+        time_local STRING,
+        method STRING,
+        uri STRING,
+        protocol STRING,
+        status STRING,
+        bytes_sent STRING,
+        referer STRING,
+        useragent STRING
+    )
+    ROW FORMAT SERDE 'org.apache.hadoop.hive.serde2.RegexSerDe'
+    WITH SERDEPROPERTIES ('input.regex'='^(\\S+) \\S+ \\S+ \\[([^\\[]+)\\] "(\\w+) (\\S+) (\\S+)" (\\d+) (\\d+) "([^"]+)" "([^"]+)".*')
+    LOCATION '/user/hdfs/web_logs';`
+    
+3. Visualizar los datos  
+`SELECT * FROM <tu_nombre>.access_log LIMIT 100;`
 
-3. Crear una base de datos en Impala con tu nombre  
-`CREATE DATABASE <tu_nombre>;`
-
-4. Crear la tabla externa que apunte al directorio en HDFS  
-`CREATE EXTERNAL TABLE <tu_nombre>.orden LIKE PARQUET '<ruta del parquet>' STORED AS PARQUET LOCATION '/user/<tu_nombre>/orden_trabajo';`  
-Ejemplo ruta parquet: /user/<tu_nombre>/orden_trabajo/6b672ea3-45fa-4fca-b4ad- 47617245b76e.parquet
-
-
-5. Describir los campos de la tabla  
-`DESCRIBE <tu_nombre>.orden;`
-
-6. Ejecutar queries libres con los datos utilizados. Ejemplos:  
-`select * from <tu_nombre>.orden limit 30;`  
-`select count(*) from <tu_nombre>.orden;`  
-`select districto_nombre, count(*) from <tu_nombre>.orden group by districto_nombre;`  
+4. Ejecutar consultas sobre la tabla  
+`CREATE TABLE <tu_nombre>.metricas_accesos AS 
+SELECT uri, status, COUNT(*) cantidad FROM <tu_nombre>.access_log GROUP BY uri, status;`
 
 ### REFERENCIA
 
-https://www.cloudera.com/documentation/enterprise/5-8-x/topics/impala_create_table.html
+https://cwiki.apache.org/confluence/display/Hive/LanguageManual+DDL

@@ -1,32 +1,28 @@
 ### OBJETIVO
-* Ingestar datos desde base de datos
+* Crear una tabla en Impala con los datos ingestados de la base de datos 
 
 ### GUIA
-1. El instructor mostrará el formato de datos
-
-2. Verificar si existe conexión con la base de datos    
-`sqoop list-tables --driver com.mysql.jdbc.Driver --connect jdbc:mysql://10.0.0.26:3306/taller --username taller --password taller`
-
-Deberá listada la tabla "orden" de la base de datos.  
-
-3. Ejecutar el siguiente comando de Sqoop  
-`sqoop import --driver com.mysql.jdbc.Driver --connect jdbc:mysql://10.0.0.26:3306/taller --username taller --password taller --table orden --split-by orden_trabajo_id --target-dir /user/<tu_nombre>/orden_trabajo`
-
-4. Revisar la ingesta en el directorio HDFS  
+1. Copiar la ruta del primer archuivo parquet en directorio HDFS  
 `hdfs dfs -ls /user/<tu_nombre>/orden_trabajo`
 
-5. Intentar ejecutar el comando del punto 3 nuevamente.
+2. Acceder la consola de Hue o impala-shell (consola línea de comando)  
 
-6. Revisar el mensaje de error que se mosrtrará en pantalla.
+3. Crear una base de datos en Impala con tu nombre  
+`CREATE DATABASE <tu_nombre>;`
 
-### GUIA CONTINUACION
+4. Crear la tabla externa que apunte al directorio en HDFS  
+`CREATE EXTERNAL TABLE <tu_nombre>.orden LIKE PARQUET '<ruta del parquet>' STORED AS PARQUET LOCATION '/user/<tu_nombre>/orden_trabajo';`  
+Ejemplo ruta parquet: /user/<tu_nombre>/orden_trabajo/6b672ea3-45fa-4fca-b4ad- 47617245b76e.parquet
 
-1. Tomando en consideración el comando anterior, modificarlo de la siguiente forma  
-`sqoop import --driver com.mysql.jdbc.Driver --connect jdbc:mysql://10.0.0.26:3306/taller --username taller --password taller --table orden --split-by orden_trabajo_id --target-dir /user/<tu_nombre>/orden_trabajo --delete-target-dir --as-parquetfile`
 
-2. Revisar la ingesta en el directorio HDFS  
-`hdfs dfs -ls /user/<tu_nombre>/orden_trabajo`
+5. Describir los campos de la tabla  
+`DESCRIBE <tu_nombre>.orden;`
+
+6. Ejecutar queries libres con los datos utilizados. Ejemplos:  
+`select * from <tu_nombre>.orden limit 30;`  
+`select count(*) from <tu_nombre>.orden;`  
+`select districto_nombre, count(*) from <tu_nombre>.orden group by districto_nombre;`  
 
 ### REFERENCIA
 
-https://sqoop.apache.org/docs/1.4.6/SqoopUserGuide.html
+https://www.cloudera.com/documentation/enterprise/5-8-x/topics/impala_create_table.html
