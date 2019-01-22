@@ -1,4 +1,4 @@
-#Exercicio Cloudera Data Science Workbench
+Exercicio Cloudera Data Science Workbench
 
 Utilizar la siguiente url de github para clonar proyecto:
 
